@@ -37,8 +37,16 @@ h4 {
 }
 
 
-bg-feature {
+.bg-feature {
   background-color: #C97324;
+}
+
+.bg-base {
+  background-color: #FBF2E9;
+}
+
+.border-feature {
+  border-color: #C97324;
 }
 
 text-featured {
@@ -70,7 +78,7 @@ a {
 @layer base {
 
 .button {
-  @apply text-white bg-feature
+  @apply text-white
 }
 
 }

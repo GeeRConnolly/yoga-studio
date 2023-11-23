@@ -8,13 +8,13 @@ seo:
     hide-from-google: false
 
 classes:
-    - name: Bikram hot yoga
+    - name: Bikram Hot Yoga
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Bikram hot yoga
+    - name: Mandala Yoga
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Bikram hot yoga
+    - name: Chakra Flow
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Bikram hot yoga
+    - name: Vinyasa Flow
       description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
 ---
 
@@ -35,48 +35,49 @@ classes:
 
 <section>
 
-        <div class="grid grid-cols-2 gap-10 p-5p">
+        <div class="grid grid-cols-2 gap-[1px] bg-feature p-[1px]">
 
-            <div class="self-center">
-                <h2 class="text-4xl max-w-sm"> The Yoga Studio. </h2>
-                <p class="py-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio obcaecati impedit quas eaque vero nihil laborum culpa voluptates facilis </p>
-                <a href="#" class=""> Read more </a>
-
+            <div class="bg-base flex p-5">
+                <div class="self-end">
+                    <h2 class="text-4xl max-w-sm"> The Yoga Studio. </h2>
+                    <p class="py-4 max-w-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio obcaecati impedit quas eaque vero nihil laborum culpa voluptates facilis </p>
+                    <a href="#" class=""> Read more </a>
+                </div>
             </div>
 
                 <img src="/images/yoga-images/jempinis-12 2.jpg">
         
+ <div> 
+        <div style="background-image: url('images/yoga-images/jempinis-12\ 3.jpg');" class="min-h-screen bg-cover relative">
+            <div class="absolute bottom-10">
+            <h2 class="text-white"> Our classes </h2>
+            <p class="text-white"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos ipsum sed, ea excepturi, nesciunt accusamus. </p>
+            <a href="#" class="uppercase bg-feature text-white p-2"> Find out more </a>
+            </div>
         </div>
-</section>
+</div>
+        <!-- Class options grid layout -->
 
-<!-- Section 3 - Class options section -->
-
-<section>
-
-    <div class="grid grid-cols-2"> 
-        <div style="background-image: url('images/yoga-images/jempinis-12\ 3.jpg');" class=" min-h-screen bg-cover"> 
-            <h2> Our classes </h2>
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos ipsum sed, ea excepturi, nesciunt accusamus. </p>
-            <a href="#" class="uppercase"> Find out more </a>
-        
-        </div>
-
-        <div class="grid grid-cols-2 grid-rows-2 border-black"> 
-            <h3> Bikram hot yoga </h3>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
-            <h3> Mandala yoga </h3>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+        <div class="grid grid-cols-2 grid-rows-2 gap-[1px] bg-feature"> 
             
-            <h3> Chakra flow </h3>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            {% for class in page.classes %}
 
-            <h3> Vinyasa flow </h3>
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            <div class="flex items-end bg-base">
+                <div class="p-5p">
+
+                    <h3 class="text-xl"> {{class.name}} </h3>
+                
+                    <p> {{class.description}} </p>
+            </div>
+            </div>
+
+            {% endfor %}
+
         </div>
 
+        <!-- Testimonial section -->
 
 
-    </div>
+     </div>
 
 </section>
