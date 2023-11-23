@@ -90,17 +90,25 @@ a {
 
 /* Background  */
 #momence-embed #momence-plugin-host-schedule .momence-host_schedule {
-  @apply bg-beige;
+  @apply bg-base;
 }
 
 /* Background  */
 #momence-embed #momence-plugin-host-schedule * {
-  @apply bg-beige text-copper font-sans font-light rounded-none border-copper;
+  @apply bg-base text-orange text-oranienbaum rounded-none border-orange ;
+}
+
+#momence-embed  h4 {
+  @apply capitalize
+}
+
+body #momence-embed #momence-plugin-host-schedule .EenGE{
+  @apply bg-orange text-base
 }
 
 /* Styling the headings  */
 #momence-embed #momence-plugin-host-schedule h4 {
-  @apply text-copper font-serif;
+  @apply text-orange;
 }
 
 /* Hide the class type text above the class title */
@@ -121,7 +129,7 @@ a {
 
 /* Style the featured button  */
 #momence-embed #momence-plugin-host-schedule .momence-host_schedule-session_list-item-booked_button {
-  @apply inline-block px-6 py-2 uppercase tracking-wide bg-copper text-light rounded-none whitespace-nowrap;
+  @apply inline-block px-6 py-2 uppercase tracking-wide bg-orange text-base rounded-none whitespace-nowrap;
 }
 
 /* Remove the border from the arrows left and right at the top  */
@@ -137,7 +145,7 @@ a {
 
 /* Add more space below the first row  */
 #momence-embed #momence-plugin-host-schedule .momence-event_type_select-button {
-  @apply text-2xl font-serif pointer-events-none;
+  @apply text-2xl pointer-events-none;
 }
 
 /* Hide powered by momence */
@@ -148,6 +156,6 @@ a {
 
 /* Styling the lines under the list of pages */
 #momence-embed #momence-plugin-host-schedule .gZOyVg::after {
-  @apply bg-copper;
+  @apply bg-orange;
 }
 
