@@ -410,14 +410,44 @@ video {
 .flex {
   display: flex;
 }
+.grid {
+  display: grid;
+}
+.min-h-screen {
+  min-height: 100vh;
+}
+.max-w-sm {
+  max-width: 24rem;
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.flex-col {
+  flex-direction: column;
+}
 .items-center {
   align-items: center;
 }
 .justify-between {
   justify-content: space-between;
 }
+.gap-10 {
+  gap: 2.5rem;
+}
+.self-center {
+  align-self: center;
+}
+.bg-cover {
+  background-size: cover;
+}
+.bg-\[60\%_40\%\] {
+  background-position: 60% 40%;
+}
 .p-3 {
   padding: 0.75rem;
+}
+.p-5p {
+  padding: 5%;
 }
 .py-3 {
   padding-top: 0.75rem;
@@ -427,21 +457,33 @@ video {
   padding-left: 2rem;
   padding-right: 2rem;
 }
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 1.2;
 }
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 1;
+}
 .uppercase {
   text-transform: uppercase;
-}
-.-tracking-wider {
-  letter-spacing: -0.05em;
 }
 .tracking-wider {
   letter-spacing: 0.05em;
 }
 .tracking-widest {
   letter-spacing: 0.1em;
+}
+.underline {
+  text-decoration-line: underline;
 }
 
 /* Custom CSS */
