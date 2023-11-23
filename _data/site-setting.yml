@@ -1,0 +1,9 @@
+nav-items:
+- page: our classes
+  url: /classes
+- page: schedule
+  url: /schedule
+- page: contact
+  url: /contact
+
+

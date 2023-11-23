@@ -404,6 +404,45 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.m-3 {
+  margin: 0.75rem;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.p-3 {
+  padding: 0.75rem;
+}
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.-tracking-wider {
+  letter-spacing: -0.05em;
+}
+.tracking-wider {
+  letter-spacing: 0.05em;
+}
+.tracking-widest {
+  letter-spacing: 0.1em;
+}
 
 /* Custom CSS */
 
@@ -412,18 +451,40 @@ html {
 }
 
 body{
-  background-color: rgb(90,90,95);
-  color: rgb(60,60,65);
-    font-family: 'Nunito Sans', sans-serif;
+  background-color: #FBF2E9;
+  color: #C97324;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Heading styles */
+
+h1, 
+h2,
+h3 {
+  font-family: 'Oranienbaum', serif;
+  color: #C97324;
+}
+
+/* Subheadings use h4 */
+
+h4 {
+  font-family: 'Poppins', sans-serif;
+  text-transform: uppercase;
+  color: #C97324;
+}
+
+
+bg-feature {
+  background-color: #C97324;
+}
+
+text-featured {
+  font-family: 'Oranienbaum', serif;
 }
 
 body > section{
   position: relative;
   padding: 4%
-}
-
-.example-block {
-    font-family: 'Noto Sans HK', sans-serif;
 }
 
 
@@ -436,9 +497,10 @@ body > section{
 img {
   max-width:100%;
 }
+
 a {
   text-decoration: none;
-    color: inherit;
+  color: inherit;
 }
 
-
+/* Custom Apply Classes being applied to whole project */
