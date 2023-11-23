@@ -56,6 +56,10 @@ module.exports = {
         'portrait-tall': '5/8',
         'portrait': '4/5',
       },
+      colors: {
+        'base': '#FBF2E9',
+        'orange': '#C97324',
+      },
     },
   },
   plugins: [

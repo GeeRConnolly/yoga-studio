@@ -8,24 +8,36 @@ seo:
     hide-from-google: false
 
 classes:
-    - name: Bikram Hot Yoga
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Mandala Yoga
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Chakra Flow
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    - name: Vinyasa Flow
-      description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- name: Bikram Hot Yoga
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- name: Mandala Yoga
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- name: Chakra Flow 
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+- name: Vinyasa Flow
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+
+testimonials:
+- image: /images/yoga-images/jempinis-12 10.jpg
+  name: Jodie
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, molestiae! Cupiditate qui sunt velit deserunt unde.
+- image: /images/yoga-images/jempinis-12 11.jpg
+  name: Jodie
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, molestiae! Cupiditate qui sunt velit deserunt unde.
+- image: /images/yoga-images/jempinis-12 12.jpg
+  name: Jodie
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, molestiae! Cupiditate qui sunt velit deserunt unde.
+
 ---
 
 <!------ Section 1 banner background image and text ------->
 
-<section style="background-image: url('/images/yoga-images/jempinis-12\ 1.jpg');" class="flex flex-col bg-cover bg-[60%_40%] min-h-screen">
+<section style="background-image: url('/images/yoga-images/jempinis-12\ 1.jpg');" class="flex flex-col bg-cover bg-[60%_40%] min-h-screen justify-center">
 
-    <div>
-
-    <h4> Welcome to </h4>
-    <h1> The yoga studio </h1>
+    <div class="border-t border-[#C97324] max-w-xs"></div>
+    <div class="pl-20">
+        <h4 class="text-2xl pt-4"> Welcome to </h4>
+        <h1 class="text-8xl"> The Yoga Studio </h1>
 
     </div>
 
@@ -35,49 +47,69 @@ classes:
 
 <section>
 
-        <div class="grid grid-cols-2 gap-[1px] bg-feature p-[1px]">
+    <div class="grid grid-cols-2 gap-[1px] bg-orange p-[1px]">
 
-            <div class="bg-base flex p-5">
-                <div class="self-end">
-                    <h2 class="text-4xl max-w-sm"> The Yoga Studio. </h2>
-                    <p class="py-4 max-w-sm"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio obcaecati impedit quas eaque vero nihil laborum culpa voluptates facilis </p>
-                    <a href="#" class=""> Read more </a>
-                </div>
-            </div>
-
-                <img src="/images/yoga-images/jempinis-12 2.jpg">
-        
- <div> 
-        <div style="background-image: url('images/yoga-images/jempinis-12\ 3.jpg');" class="min-h-screen bg-cover relative">
-            <div class="absolute bottom-10">
-            <h2 class="text-white"> Our classes </h2>
-            <p class="text-white"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos ipsum sed, ea excepturi, nesciunt accusamus. </p>
-            <a href="#" class="uppercase bg-feature text-white p-2"> Find out more </a>
+        <div class="bg-base flex p-5">
+            <div class="self-end p-6">
+                <h2 class="text-4xl max-w-sm my-4"> The Yoga Studio. </h2>
+                <p class="max-w-sm my-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit optio obcaecati impedit quas eaque vero nihil laborum culpa voluptates facilis </p>
+                <a href="#" class="uppercase bg-orange text-white py-2 px-4 my-4 text-sm"> Sign Up </a>
             </div>
         </div>
-</div>
-        <!-- Class options grid layout -->
 
-        <div class="grid grid-cols-2 grid-rows-2 gap-[1px] bg-feature"> 
-            
-            {% for class in page.classes %}
+        <img src="/images/yoga-images/jempinis-12 2.jpg">
 
-            <div class="flex items-end bg-base">
-                <div class="p-5p">
-
-                    <h3 class="text-xl"> {{class.name}} </h3>
-                
-                    <p> {{class.description}} </p>
+        <div> 
+            <div style="background-image: url('images/yoga-images/jempinis-12\ 3.jpg');" class="min-h-screen bg-cover relative">
+                <div class="absolute bottom-10 p-5">
+                <h2 class="text-4xl text-white max-w-sm my-4"> Our classes </h2>
+                <p class="text-white max-w-sm my-4"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos ipsum sed, ea excepturi, nesciunt accusamus. </p>
+                <a href="#" class="uppercase bg-orange text-white py-2 px-4 text-sm"> Find out more </a>
             </div>
+        </diV>
+    </div>
+
+    <!-- Class options grid layout -->
+
+    <div class="grid grid-cols-2 grid-rows-2 gap-[1px] bg-orange"> 
+
+    {% for class in page.classes %}
+
+        <div class="flex items-end bg-base">
+            <div class="p-5p">
+
+                <h3 class="text-2xl"> {{class.name}} </h3>
+
+                <p class="text-md"> {{class.description}} </p>
             </div>
-
-            {% endfor %}
-
         </div>
 
-        <!-- Testimonial section -->
+    {% endfor %}
 
+    </div>
+</section>
 
-     </div>
+    <!-- Testimonial section -->
+<section class="p-8">
+    <div>
+        <h1 class="text-4xl"> Testimonials </h1>
+    </div>
+
+    <div class="grid grid-cols-3 gap-4"> 
+
+    {% for testimonial in page.testimonials %}
+
+    <div class="text-center">
+    <div>
+            <img src="{{testimonial.image}}" class="aspect-square w-full h-full object-cover m-[4px] border-[#C97324] border">
+            <h3 class="text-2xl p-4"> {{testimonial.name}} </h3>
+            <p class="border-t border-[#C97324] text-md p-4"> {{testimonial.text}} </p>
+    </div>
+        </div>
+
+        {% endfor %}
+
+    </div>
+
 
 </section>

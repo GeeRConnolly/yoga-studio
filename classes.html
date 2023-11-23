@@ -1,3 +1,23 @@
 ---
 layout: default
+page-banner:
+    image: /images/yoga-images/jempinis-12 3.jpg
+    heading: Our classes
+    object-position: 55% 20%
 ---
+
+{% include page-banner.html %}
+
+<section> 
+
+    <div class="grid grid-cols-3 gap-6 p-5p border-t-[#C97324] border">
+
+        {% for class in site.service-classes %}
+
+        {% include class-loop-item.html %}
+
+        {% endfor %}
+    </div>
+
+
+</section>
