@@ -1,9 +1,11 @@
 <div class="grid grid-cols-3 items-center">
 
-    <div class="relative z-10">
-        <div class="border-t border-[#C97324] max-w-xs"></div>
+    <!-- Use relative and the z index in order to bring the h1 forward to go over the text when it goes on smaller screens -->
 
-        <h1 class="max-w-2xl text-8xl font-display pt-4 pl-20"> {{page.page-banner.heading}} </h1>
+    <div class="relative z-10">
+        <div class="border-t border-[#FF6F61] w-[20rem]"></div>
+
+        <h1 class="w-screen text-6xl md:text-8xl font-display pt-4 pl-6 md:pl-20"> {{page.page-banner.heading}} </h1>
     </div>
 
     <img src="{{page.page-banner.image}}" class="col-span-2 max-h-[80vh] w-full object-cover" style="object-position:{{page.page-banner.object-position}};"> 

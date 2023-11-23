@@ -15,7 +15,7 @@ html {
 
 body{
   background-color: #FBF2E9;
-  color: #C97324;
+  color: #FF6F61;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -25,7 +25,7 @@ h1,
 h2,
 h3 {
   font-family: 'Oranienbaum', serif;
-  color: #C97324;
+  color: #FF6F61;
 }
 
 /* Subheadings use h4 */
@@ -33,7 +33,7 @@ h3 {
 h4 {
   font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
-  color: #C97324;
+  color: #FF6F61;
 }
 
 .text-oranienbaum {
@@ -41,7 +41,7 @@ h4 {
 }
 
 .border-feature {
-  border-color: #C97324;
+  border-color: #FF6F61;
 }
 
 .text-beige {
@@ -49,8 +49,10 @@ h4 {
 }
 
 .text-orange {
-  color:#C97324
+  color:#FF6F61
 }
+
+/*  It would be better practice now to put these in the tailwind classes */
 
 text-featured {
   font-family: 'Oranienbaum', serif;
@@ -159,3 +161,93 @@ body #momence-embed #momence-plugin-host-schedule .EenGE{
   @apply bg-orange;
 }
 
+
+
+/*  This is for the hamburger menu  */
+
+
+
+/* this is where you style the button if you want to add more space between the spans than add padding to this div but make sure you also add it to the top and bottom active classes on there top/bottom or else your cross wont line up*/
+
+.burger-button {
+  position:fixed;
+  top: 2vh;
+  right: 2vh;
+  z-index: 90;
+  padding: 8px;
+}
+/*this is where you can chand the color of the buttons*/
+.burger-button span{
+  width: 40px;
+  border: 2px solid #FF6F61;
+  background-color: #FF6F61;
+  display: block;
+  border-radius: 22px;
+  transition: 2s;
+}
+.burger-button.active span{
+  border-color: #FF6F61;
+  background-color:#FF6F61;
+}
+
+.burger-top, .burger-bottom{
+  position: absolute;
+}
+
+.burger-top{
+  top: -02px;
+}
+
+.burger-bottom{
+  bottom: -02px;
+}
+/* make sure this has the same top as the burger button has padding*/
+.burger-button.active .burger-top{
+  position: absolute;
+  top: 8px;
+  transform: rotateZ(45deg);
+}
+
+.burger-button.active .burger-middle{
+/*   transform: rotateZ(270deg); */
+  border-color: rgba(0,0,0,0);
+  background-color:rgba(0,0,0,0);
+}
+
+/* make sure this has the same bottom as the burger button has padding*/
+
+.burger-button.active .burger-bottom{
+  position: absolute;
+  bottom: 8px;
+  transform: rotateZ(-45deg);
+}
+
+.burger-menu {
+  @apply bg-base;
+    display: flex;
+    position: fixed;
+    top: 0vh;
+    left:100vw;
+    right: -100vw;
+    bottom: 0vh;
+    padding:5px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    z-index: 80;
+  transition:1s;
+    align-content:space-around;
+  justify-content:space-around;
+  flex-direction:column;
+}
+.burger-menu.active{
+  left:50vw;
+  right:0;
+}
+.burger-menu a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #FF6F61;
+  display:block;
+  padding:5px 15px;
+  text-align:center;
+  white-space:nowrap;
+}

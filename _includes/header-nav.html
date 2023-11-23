@@ -1,6 +1,6 @@
 <!---- This 'absolute z-10 inset-x-0' is used in order to set the nav bar to the back of the page in order to bring the image forward essentially making it transparent  ----->
 
-<header class="absolute z-10 inset-x-0">
+<header class="absolute z-20 inset-x-0">
 
      <!--  Logo heading - top left -->
 
@@ -10,7 +10,8 @@
 
     <!-- This is the loop set up for the nav bar across all the pages -->
 
-        <nav>
+    <!-- For hamburger menu to be hidden on desktop -->
+        <nav class="hidden md:block">
 
             {% for nav-item in site.data.site-setting.nav-items %}
 
@@ -19,6 +20,24 @@
             {% endfor %}
 
         </nav>
+
+
+        <!--  This is creating a hamburger menu -->
+
+        <nav class="md:hidden">
+            <div class="burger-button">
+                <span class="burger-top"></span>
+                <span class="burger-middle"></span>
+                <span class="burger-bottom"></span>
+            </div>
+             <div class="burger-menu">
+                {% for nav-item in site.data.site-setting.nav-items %}
+
+                <a href="{{nav-item.url}}" class="tracking-widest m-3 p-3">{{nav-item.page}}</a>
+    
+                {% endfor %}
+            </div>
+          </nav>
 
     </div>
 

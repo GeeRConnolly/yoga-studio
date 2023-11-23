@@ -58,7 +58,7 @@ module.exports = {
       },
             colors: {
         'base': '#FBF2E9',
-        'orange': '#C97324',
+        'orange': '#FF6F61',
       },
     },
   },
